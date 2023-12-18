@@ -34,12 +34,15 @@ Then, open config.json and replace "YOUR_API_KEY" with your actual API key.
 
 **Create the alias command**
 ```
-alias='(
+alias oura='(
 # Retrieve scores from Oura API.
-python /path/to/Oura/oura.py &&
+python /path/to/oura-daily-scores/oura.py &&
 # Convert outputted image to ascii text.
 jp2a daily_scores.png &&
 # Delete the image after use.
 rm daily_scores.png
 )'
 ```
+**Execute**
+
+After setting the alias, execute `oura` in the terminal. 
