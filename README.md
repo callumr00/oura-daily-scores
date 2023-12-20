@@ -2,6 +2,8 @@
 
 Display your [Oura](https://ouraring.com/) Daily Scores in your terminal.
 
+![Screenshot](screenshot.png)
+
 ---
 
 ### How It Works
