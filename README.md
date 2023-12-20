@@ -35,6 +35,8 @@ cp config.sample.json config.json
 Then, open config.json and replace "YOUR_API_KEY" with your actual API key.
 
 **Create the alias command**
+
+Make sure to set the OURA_DIR environment variable to the correct location of the oura-daily-scores directory.
 ```
 OURA_DIR="/path/to/oura-daily-scores"
 
