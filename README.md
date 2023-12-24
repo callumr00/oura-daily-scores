@@ -35,18 +35,19 @@ cp config.sample.json config.json
 Then, open config.json and replace "YOUR_API_KEY" with your actual API key.
 
 **Create the alias command**
-```
-OURA_DIR="/path/to/oura-daily-scores"
 
-alias oura='(
-# Retrieve scores from Oura API.
-python $OURA_DIR/oura.py &&
-# Convert outputted image to ascii text.
-jp2a $OURA_DIR/daily_scores.png &&
-# Delete the image after use.
-rm $OURA_DIR/daily_scores.png
-)'
+Add the following to your `~/.bashrc` file.
 ```
+# Print Oura Daily Scores in terminal.
+export OURA_DIR=path/to/oura-daily-scores
+alias oura="(
+    python ${OURA_DIR}oura.py &&
+    jp2a ${OURA_DIR}daily_scores.png &&
+    rm ${OURA_DIR}daily_scores.png
+)"
+```
+Ensure to change the value of `OURA_DIR` accordingly.
+
 **Execute**
 
 After setting the alias, execute `oura` in the terminal. 

@@ -123,7 +123,8 @@ def print_header(metrics: List, scores: List) -> None:
         message = ''
 
 
-with open('config.json', 'r') as config_file:
+file_path = os.path.join(os.environ.get('OURA_DIR'), 'config.json')
+with open(file_path, 'r') as config_file:
     config = json.load(config_file)
     API_KEY = config['API_KEY']
 
